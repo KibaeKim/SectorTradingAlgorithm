@@ -11,4 +11,4 @@ This algorithm is really simple.
 Because this algorithm operates on Vanguard's 11 Sector ETFs, it is resilient against the volatility of individual stocks.
 
 ### Caution
-Hindsight is 20/20 and because this is a backdating algorithm, use this information at your own risk.
+Hindsight is 20/20 and because this is a backdating algorithm, similar results are not guaranteed in the future. Use at your own risk.
