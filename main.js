@@ -76,10 +76,16 @@ function mainFunction() {
   var tradingDays = performance.length;
   var annualizedReturn = (1 + avg) ** 253 - 1;
 
+  /*  
+    Average daily rate = 0.08774690684042068%
+    Number of trading days = 4366
+    Annualized return = 24.84494387511409%
+    1000 on January 30, 2005 would equal 31829.94540714155 on June 6, 2021
+  */
+  console.log(`Average daily rate = ${avg * 100}%`);
+  console.log(`Number of trading days = ${tradingDays}`);
+  console.log(`Annualized return = ${annualizedReturn * 100}%`);
   console.log(
-    `Average daily rate = ${avg}
-      \nNumber of trading days = ${tradingDays}
-      \nAnnualized return = ${annualizedReturn * 100}%
-      \n${1000} on January 30, 2005 would equal ${cash} on June 6, 2021`
+    `${1000} on January 30, 2005 would equal ${cash} on June 6, 2021`
   );
 }
