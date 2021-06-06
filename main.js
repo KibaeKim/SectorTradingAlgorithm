@@ -82,6 +82,7 @@ function mainFunction() {
     Annualized return = 24.84494387511409%
     1000 on January 30, 2005 would equal 31829.94540714155 on June 6, 2021
     Standard deviation = 0.013087711662769837
+    Performance on the worst trading day -9.825416558076196%
   */
   console.log(`Average daily rate = ${avg * 100}%`);
   console.log(`Number of trading days = ${tradingDays}`);
@@ -92,16 +93,25 @@ function mainFunction() {
   console.log(
     `Standard deviation = ${calculateStandardDeviation(performance)}`
   );
+  console.log(
+    `Performance on the worst trading day ${
+      worstDayPerformance(performance) * 100
+    }%`
+  );
 }
 
-function calculateStandardDeviation(numbersArr) {
+function calculateStandardDeviation(performance) {
   var total = 0;
-  for (var key in numbersArr) total += numbersArr[key];
-  var meanVal = total / numbersArr.length;
+  for (var key in performance) total += performance[key];
+  var meanVal = total / performance.length;
 
   var sdPrep = 0;
-  for (var key in numbersArr)
-    sdPrep += Math.pow(parseFloat(numbersArr[key]) - meanVal, 2);
-  var sdResult = Math.sqrt(sdPrep / numbersArr.length);
+  for (var key in performance)
+    sdPrep += Math.pow(parseFloat(performance[key]) - meanVal, 2);
+  var sdResult = Math.sqrt(sdPrep / performance.length);
   return sdResult;
+}
+
+function worstDayPerformance(performance) {
+  return Math.min(...performance);
 }
