@@ -81,6 +81,7 @@ function mainFunction() {
     Number of trading days = 4366
     Annualized return = 24.84494387511409%
     1000 on January 30, 2005 would equal 31829.94540714155 on June 6, 2021
+    Standard deviation = 0.013087711662769837
   */
   console.log(`Average daily rate = ${avg * 100}%`);
   console.log(`Number of trading days = ${tradingDays}`);
@@ -88,4 +89,19 @@ function mainFunction() {
   console.log(
     `${1000} on January 30, 2005 would equal ${cash} on June 6, 2021`
   );
+  console.log(
+    `Standard deviation = ${calculateStandardDeviation(performance)}`
+  );
+}
+
+function calculateStandardDeviation(numbersArr) {
+  var total = 0;
+  for (var key in numbersArr) total += numbersArr[key];
+  var meanVal = total / numbersArr.length;
+
+  var sdPrep = 0;
+  for (var key in numbersArr)
+    sdPrep += Math.pow(parseFloat(numbersArr[key]) - meanVal, 2);
+  var sdResult = Math.sqrt(sdPrep / numbersArr.length);
+  return sdResult;
 }
