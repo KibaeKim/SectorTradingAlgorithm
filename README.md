@@ -1,6 +1,6 @@
 # SectorTradingAlgorithm
 
-This is a simple trading algorithm I discovered that operates on the Vanguard sector ETFs. This backdating algorithm provides on average a return of ~0.0878% return for each trading day, or ~24.85% annualized return assuming 253 trading days per year.
+This is a simple trading algorithm I discovered that operates on the Vanguard sector ETFs. This backdating algorithm provides on average a return of ~0.0878% for each trading day, or ~24.85% annualized return assuming 253 trading days per year.
 
 ## The Algorithm
 
