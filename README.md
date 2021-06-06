@@ -9,3 +9,6 @@ This algorithm is really simple.
 2. On day `n+1`, short sell the previous day's highest performing ETF at market open and close your short position at market close.
 
 Because this algorithm operates on Vanguard's 11 Sector ETFs, it is resilient against the volatility of individual stocks.
+
+### Caution
+Hindsight is 20/20 and because this is a backdating algorithm, use this information at your own risk.
