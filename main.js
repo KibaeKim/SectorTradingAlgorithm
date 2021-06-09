@@ -74,15 +74,16 @@ function mainFunction() {
   }
   var avg = total / performance.length;
   var tradingDays = performance.length;
-  var annualizedReturn = (1 + avg) ** 253 - 1;
+
+  var annualizedReturn = (cash / 1000) ** (253 / tradingDays) - 1;
 
   /*  
     Average daily rate = 0.08774690684042068%
-    Number of trading days = 4366
-    Annualized return = 24.84494387511409%
-    1000 on January 30, 2005 would equal 31829.94540714155 on June 6, 2021
-    Standard deviation = 0.013087711662769837
-    Performance on the worst trading day -9.825416558076196%
+Number of trading days = 4366
+Annualized return = 22.204163102061415%
+1000 on January 30, 2005 would equal 31829.94540714155 on June 6, 2021
+Standard deviation = 0.013087746861928531
+Performance on the worst trading day -9.825416558076196%
   */
   console.log(`Average daily rate = ${avg * 100}%`);
   console.log(`Number of trading days = ${tradingDays}`);
