@@ -14,4 +14,4 @@ Standard deviation = 0.00968930375592213
 
 Performance on the worst trading day -2.685867256574796%
 
-This algorithm ended up losing money over the time period. Honestly I thought it would do much worse, considering the SPY index went from $422.59 to $440.04 over the same period (+4.129%).
+This algorithm ended up losing money over the time period (-0.0098%). Honestly I thought it would do much worse, considering the SPY index went from $422.59 to $440.04 over the same period (+4.129%).
