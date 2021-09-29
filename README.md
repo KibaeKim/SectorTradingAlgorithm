@@ -1,14 +1,12 @@
 # SectorTradingAlgorithm
 
-This is a simple trading algorithm I discovered that operates on the Vanguard sector ETFs. This backdating algorithm provides on average a return of ~0.0878% for each trading day, or ~22.20% annualized return assuming 253 trading days per year.
+This branch shows the performance of this algorithm from June 5, 2021 to September 28, 2021
 
-## The Algorithm
+Average daily rate = -0.007786296374414339%
+Number of trading days = 79
+Annualized return = -3.104246106796704%
+1000 on June 5, 2021 would equal 990.201583176651 on September 28, 2021
+Standard deviation = 0.00968930375592213
+Performance on the worst trading day -2.685867256574796%
 
-This algorithm is really simple. 
-1. On day `n`, determine which ETF gave the highest return
-2. On day `n+1`, short sell the previous day's highest performing ETF at market open and close your short position at market close.
-
-Because this algorithm operates on Vanguard's 11 Sector ETFs, it is resilient against the volatility of individual stocks.
-
-### Caution
-Hindsight is 20/20 and because this is a backdating algorithm, similar results are not guaranteed in the future. Use at your own risk.
+This algorithm ended up losing money over the time period. Honestly I thought it would do much worse, considering the SPY index went from $422.59 to $440.04 over the same period (+4.129%).

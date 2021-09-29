@@ -78,18 +78,18 @@ function mainFunction() {
   var annualizedReturn = (cash / 1000) ** (253 / tradingDays) - 1;
 
   /*  
-    Average daily rate = 0.08774690684042068%
-    Number of trading days = 4366
-    Annualized return = 22.204163102061415%
-    1000 on January 30, 2004 would equal 31829.94540714155 on June 6, 2021
-    Standard deviation = 0.013087746861928531
-    Performance on the worst trading day -9.825416558076196%
+    Average daily rate = -0.007786296374414339%
+    Number of trading days = 79
+    Annualized return = -3.104246106796704%
+    1000 on June 5, 2021 would equal 990.201583176651 on September 28, 2021
+    Standard deviation = 0.00968930375592213
+    Performance on the worst trading day -2.685867256574796%
   */
   console.log(`Average daily rate = ${avg * 100}%`);
   console.log(`Number of trading days = ${tradingDays}`);
   console.log(`Annualized return = ${annualizedReturn * 100}%`);
   console.log(
-    `${1000} on January 30, 2004 would equal ${cash} on June 6, 2021`
+    `${1000} on June 5, 2021 would equal ${cash} on September 28, 2021`
   );
   console.log(
     `Standard deviation = ${calculateStandardDeviation(performance)}`
